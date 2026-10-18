@@ -158,3 +158,19 @@
     color: var(--color-foreground);
   }
 }
+
+@keyframes search-grow {
+  from { width: 60px; opacity: 0.6; }
+  to { width: calc(100% - 65px); opacity: 1; }
+}
+@utility animate-search-grow {
+  width: calc(100% - 65px);
+  animation: search-grow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes dropdown-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@utility animate-dropdown {
+  animation: dropdown-in 0.2s ease-out;
+}
